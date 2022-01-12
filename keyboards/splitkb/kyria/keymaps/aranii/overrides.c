@@ -35,10 +35,6 @@ const key_override_t dot_scln_override = ko_make_with_layers_negmods_and_options
                                           KC_SCLN, ~0, MOD_MASK_CSG, ko_option_no_reregister_trigger);
 const key_override_t y_ampr_override = ko_make_with_layers_negmods_and_options(MOD_MASK_ALT, YOU_TAP,
                                           KC_AMPR, ~0, MOD_MASK_CSG, ko_option_no_reregister_trigger);
-const key_override_t p_play_override = ko_make_with_layers_negmods_and_options(MOD_MASK_ALT, KC_P,
-                                          KC_MPLY, ~0, MOD_MASK_CSG, ko_option_no_reregister_trigger);
-const key_override_t f_next_override = ko_make_basic(MOD_MASK_ALT, KC_F, KC_MNXT);
-const key_override_t w_prev_override = ko_make_basic(MOD_MASK_ALT, KC_W, KC_MPRV);
 const key_override_t comm_voldown_override = ko_make_with_layers_negmods_and_options(MOD_MASK_ALT, KC_COMM,
                                           KC_VOLD, ~0, MOD_MASK_CSG, ko_option_no_reregister_trigger);
 const key_override_t u_mute_override = ko_make_with_layers_negmods_and_options(MOD_MASK_ALT, KC_U,

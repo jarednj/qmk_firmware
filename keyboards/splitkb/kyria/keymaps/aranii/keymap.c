@@ -22,7 +22,6 @@ enum layers {
 };
 
 // Aliases for readability
-#define TO_HOME TO(_RSTHD)
 
 // #define DOT_TAP TD(SNTC_END_TD)
 #define YOU_TAP TD(Y_YOU_TD)
@@ -70,7 +69,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        `----------------------------------'  `----------------------------------'
  */
     [_FUN] = LAYOUT(
-      _______,TO(_ADJ), _______, _______, _______, _______,                                     _______, MEH_M,   MEH_COMM, MEH_U,    MEH_Q, _______,
+      _______,TO(_ADJ), KC_MPRV, KC_MPLY, KC_MNXT, _______,                                     _______, MEH_M,   MEH_COMM, MEH_U,    MEH_Q, _______,
       _______,    UNDO,     CUT,    COPY,   PASTE, KC_CAPS,                                     _______, MEH_N,   MEH_A,   MEH_I,     MEH_O, _______,
       _______,    REDO, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_HOME, KC_PGDN, KC_PGUP,  KC_END, _______,
                                  _______, _______, _______, _______, _______, _______, MEH_SPC, _______, _______, _______

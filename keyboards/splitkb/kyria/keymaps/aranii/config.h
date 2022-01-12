@@ -40,8 +40,6 @@
 // Configure the global tapping term (default: 200ms)
 #define TAPPING_TERM 350
 
-#define ADAPTIVE_KEY_TERM 350
-
 #define ONESHOT_TIMEOUT 4000
 #define ONESHOT_TAP_TOGGLE 2
 
