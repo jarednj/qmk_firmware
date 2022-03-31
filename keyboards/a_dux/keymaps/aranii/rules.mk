@@ -3,6 +3,7 @@ MOUSEKEY_ENABLE = no
 COMBO_ENABLE = yes
 KEY_OVERRIDE_ENABLE = yes
 TAP_DANCE_ENABLE = yes
+EXTRAKEY_ENABLE = yes
 
 # Saves a bunch of memory
 EXTRAFLAGS += -flto

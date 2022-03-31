@@ -10,6 +10,7 @@ enum layers {
 #define YOU_TAP TD(Y_YOU_TD)
 #define OSL_FUN OSL(_FUN)
 
+#include "adaptiveKeys.c"
 #include "features/autocorrection.c"
 #include "macros.c"
 #include "tapdance.c"
@@ -33,7 +34,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_RSTHD] = LAYOUT(
       KC_J,    KC_W,    KC_P,    KC_F,    KC_X,                      KC_Z,    KC_M, KC_COMM,    KC_U,    KC_Q,
       KC_R,    KC_S,    KC_T,    KC_H,    KC_B,                   KC_SLSH,    KC_N,    KC_A,    KC_I,    KC_O,
-      KC_V,    KC_C,    KC_G,    KC_D, KC_LABK,                   KC_RABK,    KC_L,  KC_DOT, KC_Y,    KC_K,
+      KC_V,    KC_C,    KC_G,    KC_D, KC_LABK,                   KC_RABK,    KC_L,  KC_DOT, YOU_TAP,    KC_K,
                                        OSL_FUN,   KC_E,  KC_SPC,  KC_ENT
     ),
 
@@ -51,9 +52,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                             `-------------'  `-------------'
  */
     [_FUN] = LAYOUT(
-       _______, KC_MPRV, KC_MPLY, KC_MNXT, _______,                   _______,   MEH_M, MEH_COM,   MEH_U,   MEH_Q,
-          UNDO,     CUT,    COPY,   PASTE, KC_CAPS,                   _______,   MEH_N,   MEH_A,   MEH_I,   MEH_O,
-          REDO, _______, _______, _______, _______,                   _______, KC_HOME, KC_PGDN, KC_PGUP,  KC_END,
+       KC_CAPS, KC_MPRV, KC_MPLY, KC_MNXT, KC_VOLU,                   _______,   MEH_M, MEH_COM,   MEH_U,   MEH_Q,
+          UNDO,     CUT,    COPY,   PASTE, KC_VOLD,                   _______,   MEH_N,   MEH_A,   MEH_I,   MEH_O,
+          REDO, _______, _______, _______, KC_MUTE,                   _______, KC_HOME, KC_PGDN, KC_PGUP,  KC_END,
                                            _______, _______, MEH_SPC, _______
     ),
 };

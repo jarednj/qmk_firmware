@@ -18,6 +18,7 @@ enum custom_keycodes {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     if (!process_autocorrection(keycode, record)) { return false; }
+    if (!process_adaptive_key(keycode, record)) { return false; }
     switch (keycode) {
     case COPY:
         if (record->event.pressed) {

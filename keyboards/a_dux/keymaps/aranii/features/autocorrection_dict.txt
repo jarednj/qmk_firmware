@@ -472,6 +472,5 @@ wherre        -> where
 wierd         -> weird
 
 
-## Aranii entries
-oyld        -> ould
+## Aranii entries,
 lookyp       -> lookup

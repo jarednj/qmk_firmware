@@ -61,7 +61,7 @@ const uint16_t PROGMEM five_combo[] = { KC_X, KC_B, COMBO_END};
 const uint16_t PROGMEM six_combo[] = { KC_SLSH, KC_Z, COMBO_END};
 const uint16_t PROGMEM seven_combo[] = { KC_O, KC_Q, COMBO_END};
 const uint16_t PROGMEM eight_combo[] = { KC_I, KC_U, COMBO_END};
-const uint16_t PROGMEM nine_combo[] = { KC_DOT, KC_A, COMBO_END};
+const uint16_t PROGMEM nine_combo[] = { KC_COMM, KC_A, COMBO_END};
 const uint16_t PROGMEM zero_combo[] = { KC_N, KC_M, COMBO_END};
 const uint16_t PROGMEM bkspc_combo[] = { KC_G, KC_D, COMBO_END};
 const uint16_t PROGMEM del_combo[] = { KC_G, KC_C, COMBO_END};
@@ -100,7 +100,7 @@ const uint16_t PROGMEM rsft_cmd_combo[] = { KC_I, KC_A, KC_N, COMBO_END};
 const uint16_t PROGMEM rcmd_ctl_combo[] = { KC_O, KC_I, KC_A, COMBO_END};
 const uint16_t PROGMEM desktop_right[] = { KC_COMM, KC_U, COMBO_END};
 const uint16_t PROGMEM desktop_left[] = { KC_COMM, KC_M, COMBO_END};
-const uint16_t PROGMEM reset_combo[] = { KC_J, KC_V, KC_X, KC_LABK, COMBO_END};
+const uint16_t PROGMEM reset_combo[] = { KC_J, KC_X, KC_E, COMBO_END};
 
 combo_t key_combos[] = {
     [ONE_COMBO] = COMBO(one_combo, KC_1),
