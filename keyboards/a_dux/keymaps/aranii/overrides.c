@@ -35,12 +35,12 @@ const key_override_t dot_scln_override = ko_make_with_layers_negmods_and_options
                                           KC_SCLN, ~0, MOD_MASK_CSG, ko_option_no_reregister_trigger);
 const key_override_t y_ampr_override = ko_make_with_layers_negmods_and_options(MOD_MASK_ALT, YOU_TAP,
                                           KC_AMPR, ~0, MOD_MASK_CSG, ko_option_no_reregister_trigger);
-const key_override_t comm_voldown_override = ko_make_with_layers_negmods_and_options(MOD_MASK_ALT, KC_COMM,
-                                          KC_VOLD, ~0, MOD_MASK_CSG, ko_option_no_reregister_trigger);
-const key_override_t u_mute_override = ko_make_with_layers_negmods_and_options(MOD_MASK_ALT, KC_U,
-                                          KC_MUTE, ~0, MOD_MASK_CSG, ko_option_no_reregister_trigger);
-const key_override_t m_volup_override = ko_make_with_layers_negmods_and_options(MOD_MASK_ALT, KC_M,
-                                          KC_VOLU, ~0, MOD_MASK_CSG, ko_option_no_reregister_trigger);
+// const key_override_t comm_voldown_override = ko_make_with_layers_negmods_and_options(MOD_MASK_ALT, KC_COMM,
+//                                           KC_VOLD, ~0, MOD_MASK_CSG, ko_option_no_reregister_trigger);
+// const key_override_t u_mute_override = ko_make_with_layers_negmods_and_options(MOD_MASK_ALT, KC_U,
+//                                           KC_MUTE, ~0, MOD_MASK_CSG, ko_option_no_reregister_trigger);
+// const key_override_t m_volup_override = ko_make_with_layers_negmods_and_options(MOD_MASK_ALT, KC_M,
+//                                           KC_VOLU, ~0, MOD_MASK_CSG, ko_option_no_reregister_trigger);
 
 const key_override_t **key_overrides = (const key_override_t *[]){
     &comma_dquo_override,
@@ -61,8 +61,8 @@ const key_override_t **key_overrides = (const key_override_t *[]){
     &l_bsls_override,
     &dot_scln_override,
     &y_ampr_override,
-    &comm_voldown_override,
-    &u_mute_override,
-    &m_volup_override,
+    // &comm_voldown_override,
+    // &u_mute_override,
+    // &m_volup_override,
     NULL // Null terminate the array of overrides
 };
