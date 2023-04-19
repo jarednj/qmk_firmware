@@ -1,3 +1,9 @@
+# MCU name
+MCU = atmega32u4
+
+# Bootloader selection
+BOOTLOADER = atmel-dfu
+
 # Build Options
 #   change yes to no to disable
 #
@@ -10,8 +16,8 @@ NKRO_ENABLE = yes           # Enable N-Key Rollover
 BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 RGBLIGHT_ENABLE = yes       # Enable keyboard RGB underglow
 AUDIO_ENABLE = no           # Audio output
-ENCODER_ENABLE = yes        # Rotary encoder
-OLED_ENABLE = yes           # Enable oled
-OLED_DRIVER = SSD1306       # Oled type
+ENCODER_ENABLE = yes
+OLED_ENABLE = yes
+OLED_DRIVER = SSD1306
 
-LTO_ENABLE = yes            # Link time optimization
+LTO_ENABLE = yes

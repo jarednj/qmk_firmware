@@ -73,9 +73,7 @@ void timer_init(void) {
  * FIXME: needs doc
  */
 inline void timer_clear(void) {
-    ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
-        timer_count = 0;
-    }
+    ATOMIC_BLOCK(ATOMIC_RESTORESTATE) { timer_count = 0; }
 }
 
 /** \brief timer read
@@ -85,9 +83,7 @@ inline void timer_clear(void) {
 inline uint16_t timer_read(void) {
     uint32_t t;
 
-    ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
-        t = timer_count;
-    }
+    ATOMIC_BLOCK(ATOMIC_RESTORESTATE) { t = timer_count; }
 
     return (t & 0xFFFF);
 }
@@ -99,9 +95,7 @@ inline uint16_t timer_read(void) {
 inline uint32_t timer_read32(void) {
     uint32_t t;
 
-    ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
-        t = timer_count;
-    }
+    ATOMIC_BLOCK(ATOMIC_RESTORESTATE) { t = timer_count; }
 
     return t;
 }
@@ -113,9 +107,7 @@ inline uint32_t timer_read32(void) {
 inline uint16_t timer_elapsed(uint16_t last) {
     uint32_t t;
 
-    ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
-        t = timer_count;
-    }
+    ATOMIC_BLOCK(ATOMIC_RESTORESTATE) { t = timer_count; }
 
     return TIMER_DIFF_16((t & 0xFFFF), last);
 }
@@ -127,9 +119,7 @@ inline uint16_t timer_elapsed(uint16_t last) {
 inline uint32_t timer_elapsed32(uint32_t last) {
     uint32_t t;
 
-    ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
-        t = timer_count;
-    }
+    ATOMIC_BLOCK(ATOMIC_RESTORESTATE) { t = timer_count; }
 
     return TIMER_DIFF_32(t, last);
 }
@@ -140,6 +130,4 @@ inline uint32_t timer_elapsed32(uint32_t last) {
 #else
 #    define TIMER_INTERRUPT_VECTOR TIMER0_COMP_vect
 #endif
-ISR(TIMER_INTERRUPT_VECTOR, ISR_NOBLOCK) {
-    timer_count++;
-}
+ISR(TIMER_INTERRUPT_VECTOR, ISR_NOBLOCK) { timer_count++; }

@@ -17,7 +17,7 @@
 #pragma once
 
 #include <stdint.h>
-#include "gpio.h"
+#include "quantum.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -28,9 +28,7 @@ typedef struct {
     uint8_t  adc;
 } adc_mux;
 #define TO_MUX(i, a) \
-    (adc_mux) {      \
-        i, a         \
-    }
+    (adc_mux) { i, a }
 
 int16_t analogReadPin(pin_t pin);
 int16_t analogReadPinAdc(pin_t pin, uint8_t adc);

@@ -1,6 +1,5 @@
 {
     "keyboard_name": "bradpad",
-    "manufacturer": "tempo_turtle",
     "url": "https://tempoturtle.com",
     "maintainer": "wxyangf",
     "diode_direction": "ROW2COL",
@@ -11,10 +10,8 @@
     "usb":{
         "vid":"0x7474",
         "pid":"0x6270",
-        "device_version":"0.0.1"
+        "device_ver":"0x0001"
     },
-    "processor": "atmega32u4",
-    "bootloader": "atmel-dfu",
     "layouts": {
         "LAYOUT": {
             "layout":[

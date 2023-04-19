@@ -1,3 +1,6 @@
+# MCU name
+MCU = MKL26Z64
+
 # Build Options
 #   change yes to no to disable
 #

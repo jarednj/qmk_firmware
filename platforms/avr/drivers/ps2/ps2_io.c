@@ -23,9 +23,7 @@ void clock_lo(void) {
     setPinOutput(PS2_CLOCK_PIN);
 }
 
-void clock_hi(void) {
-    setPinInputHigh(PS2_CLOCK_PIN);
-}
+void clock_hi(void) { setPinInputHigh(PS2_CLOCK_PIN); }
 
 bool clock_in(void) {
     setPinInputHigh(PS2_CLOCK_PIN);
@@ -44,9 +42,7 @@ void data_lo(void) {
     setPinOutput(PS2_DATA_PIN);
 }
 
-void data_hi(void) {
-    setPinInputHigh(PS2_DATA_PIN);
-}
+void data_hi(void) { setPinInputHigh(PS2_DATA_PIN); }
 
 bool data_in(void) {
     setPinInputHigh(PS2_DATA_PIN);

@@ -43,26 +43,11 @@ bool process_record_keymap(uint16_t keycode, keyrecord_t *record);
 #define KC_SEC5 KC_SECRET_5
 
 #define QWERTY KC_QWERTY
-#define DVORAK KC_NO
-#define COLEMAK KC_NO
-#define WORKMAN KC_NO
+#define DVORAK KC_DVORAK
+#define COLEMAK KC_COLEMAK
+#define WORKMAN KC_WORKMAN
 
-#if defined(ENABLE_DVORAK)
-#   undef DVORAK
-#   define DVORAK KC_DVORAK
-#endif
-
-#if defined(ENABLE_COLEMAK)
-#   undef COLEMAK
-#   define COLEMAK KC_COLEMAK
-#endif
-
-#if defined(ENABLE_WORKMAN)
-#   undef WORKMAN
-#   define WORKMAN KC_WORKMAN
-#endif
-
-#define KC_RST QK_BOOT
+#define KC_RST RESET
 
 #if defined(SWAP_HANDS_ENABLE)
 #    define KC_C1R3 SH_T(KC_TAB)

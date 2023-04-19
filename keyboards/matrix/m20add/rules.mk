@@ -10,9 +10,6 @@ MCU_LDSCRIPT = m20add_boot
 #  or <this_dir>/boards
 BOARD = ST_NUCLEO64_F411RE
 
-# Bootloader selection
-BOOTLOADER = custom
-
 # Build Options
 #   change yes to no to disable
 #

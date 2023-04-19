@@ -14,11 +14,9 @@ void bootmagic_lite(void) {
     wait_ms(30);
 #endif
     matrix_scan();
-#if defined(BOOTMAGIC_ENABLE)
     if (matrix_get_row(BOOTMAGIC_LITE_ROW) & (1 << BOOTMAGIC_LITE_COLUMN)) {
         bootloader_jump();
     }
-#endif
 }
 
 __attribute__((weak)) void keyboard_pre_init_keymap(void) {}
@@ -58,7 +56,7 @@ void shutdown_user(void) {
 #if defined(RGBLIGHT_ENABLE)
     rgblight_enable_noeeprom();
     rgblight_mode_noeeprom(1);
-    rgblight_setrgb(RGB_RED);
+    rgblight_setrgb_red();
 #endif
 
 #if defined(RGB_MATRIX_ENABLE)

@@ -3,16 +3,16 @@
  * SPDX-License-Identifier: GPL-2.0+
  */
 
-#include "quantum.h"
+#include "macro3.h"
 
 #ifdef ENCODER_ENABLE
 bool encoder_update_kb(uint8_t index, bool clockwise) {
     if (!encoder_update_user(index, clockwise)) { return false; }
     if (index == 0) {
         if (clockwise) {
-            tap_code_delay(KC_VOLU, 10);
+            tap_code(KC_VOLU);
         } else {
-            tap_code_delay(KC_VOLD, 10);
+            tap_code(KC_VOLD);
         }
     } else if (index == 1) {
         if (clockwise) {

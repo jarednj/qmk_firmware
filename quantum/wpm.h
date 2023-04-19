@@ -17,8 +17,7 @@
 
 #pragma once
 
-#include <stdbool.h>
-#include <stdint.h>
+#include "quantum.h"
 
 #ifndef WPM_ESTIMATED_WORD_SIZE
 #    define WPM_ESTIMATED_WORD_SIZE 5
@@ -27,7 +26,7 @@
 #    define WPM_SAMPLE_SECONDS 5
 #endif
 #ifndef WPM_SAMPLE_PERIODS
-#    define WPM_SAMPLE_PERIODS 25
+#    define WPM_SAMPLE_PERIODS 50
 #endif
 
 bool wpm_keycode(uint16_t keycode);

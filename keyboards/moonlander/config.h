@@ -18,8 +18,18 @@
 
 #pragma once
 
+#include "config_common.h"
 
+/* USB Device descriptor parameter */
+// clang-format off
+#define VENDOR_ID       0x3297
+#define PRODUCT_ID      0x1969
+#define MANUFACTURER    ZSA Technology Labs
+#define PRODUCT         Moonlander Mark I
+#define DEVICE_VER      0x0001
 #define WEBUSB_LANDING_PAGE_URL u8"configure.ergodox-ez.com"
+
+// clang-format on
 
 /* key matrix size */
 #define MATRIX_ROWS 12
@@ -44,6 +54,9 @@
 /* COL2ROW or ROW2COL */
 #define DIODE_DIRECTION ROW2COL
 
+/* Set 0 if debouncing isn't needed */
+#define DEBOUNCE 5
+
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE
 /* Locking resynchronize hack */
@@ -64,6 +77,8 @@
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
+#define NO_ACTION_MACRO
+#define NO_ACTION_FUNCTION
 
 #define DRIVER_ADDR_1 0b1110100
 #define DRIVER_ADDR_2 0b1110111
@@ -71,8 +86,8 @@
 #define DRIVER_COUNT 2
 #define DRIVER_1_LED_TOTAL 36
 #define DRIVER_2_LED_TOTAL 36
-#define RGB_MATRIX_LED_COUNT (DRIVER_1_LED_TOTAL + DRIVER_2_LED_TOTAL)
-#define RGB_MATRIX_CENTER { 120, 36 }
+#define DRIVER_LED_TOTAL (DRIVER_1_LED_TOTAL + DRIVER_2_LED_TOTAL)
+#define RGB_MATRIX_CENTER { 125, 26 }
 #define RGB_MATRIX_MAXIMUM_BRIGHTNESS 175
 #define RGB_MATRIX_FRAMEBUFFER_EFFECTS
 #define RGB_MATRIX_KEYPRESSES
@@ -146,6 +161,7 @@
 #    define DYNAMIC_KEYMAP_EEPROM_MAX_ADDR 16383
 #    define DYNAMIC_KEYMAP_LAYER_COUNT     8
 #endif
+#define VIA_QMK_RGBLIGHT_ENABLE
 
 #define AUDIO_PIN A5
 #define AUDIO_PIN_ALT A4

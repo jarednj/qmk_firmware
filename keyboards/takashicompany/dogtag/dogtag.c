@@ -17,31 +17,11 @@
 #include "dogtag.h"
 
 bool encoder_update_kb(uint8_t index, bool clockwise) {
-    keypos_t key;
-    if (index == 0) {
-        if (clockwise) {
-            key.row = 2;
-            key.col = 1;
-        } else {
-            key.row = 2;
-            key.col = 0;
-        }
-        uint8_t layer = layer_switch_get_layer(key);
-        uint16_t keycode = keymap_key_to_keycode(layer, key);
-
-        tap_code16(keycode);
+    if (!encoder_update_user(index, clockwise)) { return false; }
+    if (clockwise) {
+        tap_code(KC_MS_WH_DOWN);
     } else {
-        if (clockwise) {
-            key.row = 5;
-            key.col = 0;
-        } else {
-            key.row = 5;
-            key.col = 1;
-        }
-        uint8_t  layer   = layer_switch_get_layer(key);
-        uint16_t keycode = keymap_key_to_keycode(layer, key);
-
-        tap_code16(keycode);
+        tap_code(KC_MS_WH_UP);
     }
 
     return true;

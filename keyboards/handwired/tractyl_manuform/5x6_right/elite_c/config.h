@@ -18,6 +18,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+#define PRODUCT Tractyl Manuform(5x6) Elite C
+
 // wiring of each half
 #define MATRIX_COL_PINS \
     { D4, D7, E6, B4, B5, B7 }
@@ -33,10 +35,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLED_SPLIT \
     { 10, 10 }
 #define RGBLIGHT_LIMIT_VAL 80
+#define OLED_BRIGHTNESS    50
 
 #define AUDIO_PIN       C6
 
+/* serial.c configuration for split keyboard */
+#define SOFT_SERIAL_PIN D2
 #define EE_HANDS
 
-/* PMW33XX Settings */
-#define PMW33XX_CS_PIN B6
+#define ENCODERS_PAD_A \
+    { D5 }
+#define ENCODERS_PAD_B \
+    { C7 }
+
+/* PMW3360 Settings */
+#define PMW3360_CS_PIN B6

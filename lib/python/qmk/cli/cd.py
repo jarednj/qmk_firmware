@@ -2,7 +2,6 @@
 """
 import sys
 import os
-import subprocess
 
 from milc import cli
 
@@ -42,6 +41,6 @@ def cd(cli):
             # Set the prompt for the new shell
             qmk_env['MSYS2_PS1'] = qmk_env['PS1']
             # Start the new subshell
-            subprocess.run([os.environ.get('SHELL', '/usr/bin/bash')], env=qmk_env)
+            cli.run([os.environ.get('SHELL', '/usr/bin/bash')], env=qmk_env)
     else:
         cli.log.info("Already within qmk_firmware directory.")

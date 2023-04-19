@@ -10,9 +10,6 @@ MCU_LDSCRIPT = noah_boot
 #  or <this_dir>/boards
 BOARD = ST_NUCLEO64_F411RE
 
-# Bootloader selection
-BOOTLOADER = custom
-
 # Build Options
 #   change yes to no to disable
 #
@@ -33,3 +30,5 @@ RGBLIGHT_CUSTOM_DRIVER = yes
 CUSTOM_MATRIX = yes
 # project specific files
 SRC += ws2812.c matrix.c
+
+LAYOUTS = 65_iso_blocker

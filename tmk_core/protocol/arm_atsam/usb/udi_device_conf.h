@@ -220,7 +220,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #    define NEXT_OUT_EPNUM_4 (CDC_OUT_EPNUM + 1)
 
 #    define CDC_ACM_SIZE CDC_NOTIFICATION_EPSIZE
-#    define CDC_RX_SIZE CDC_EPSIZE // KFSMOD was 64
+#    define CDC_RX_SIZE CDC_EPSIZE  // KFSMOD was 64
 #    define CDC_TX_SIZE CDC_RX_SIZE
 #    define CDC_ACM_POLLING_INTERVAL 255
 #    define CDC_EP_INTERVAL_STATUS CDC_ACM_POLLING_INTERVAL
@@ -352,13 +352,25 @@ typedef struct {
 
 // clang-format on
 
+// set report buffer (from host)
+extern uint8_t udi_hid_exk_report_set;
+
 // report buffer
 #    define UDI_HID_EXK_REPORT_SIZE 3
-extern uint8_t udi_hid_exk_report[UDI_HID_EXK_REPORT_SIZE];
+
+typedef union {
+    struct {
+        uint8_t  report_id;
+        uint16_t report_data;
+    } desc;
+    uint8_t raw[UDI_HID_EXK_REPORT_SIZE];
+} udi_hid_exk_report_t;
+
+extern udi_hid_exk_report_t udi_hid_exk_report;
 
 COMPILER_PACK_RESET()
 
-#endif // EXTRAKEY_ENABLE
+#endif  // EXTRAKEY_ENABLE
 
 // **********************************************************************
 // NKRO Descriptor structure and content
@@ -421,7 +433,7 @@ extern uint8_t udi_hid_nkro_report[UDI_HID_NKRO_REPORT_SIZE];
 
 COMPILER_PACK_RESET()
 
-#endif // NKRO_ENABLE
+#endif  // NKRO_ENABLE
 
 // **********************************************************************
 // MOU Descriptor structure and content
@@ -437,7 +449,7 @@ typedef struct {
 } udi_hid_mou_desc_t;
 
 typedef struct {
-    uint8_t array[77]; // MOU PDS
+    uint8_t array[77];  // MOU PDS
 } udi_hid_mou_report_desc_t;
 
 // clang-format off
@@ -476,12 +488,12 @@ typedef struct {
 // clang-format on
 
 // report buffer
-#    define UDI_HID_MOU_REPORT_SIZE 5 // MOU PDS
+#    define UDI_HID_MOU_REPORT_SIZE 5  // MOU PDS
 extern uint8_t udi_hid_mou_report[UDI_HID_MOU_REPORT_SIZE];
 
 COMPILER_PACK_RESET()
 
-#endif // MOUSE_ENABLE
+#endif  // MOUSE_ENABLE
 
 // **********************************************************************
 // RAW Descriptor structure and content
@@ -553,7 +565,7 @@ extern uint8_t udi_hid_raw_report[UDI_HID_RAW_REPORT_SIZE];
 
 COMPILER_PACK_RESET()
 
-#endif // RAW_ENABLE
+#endif  // RAW_ENABLE
 
 // **********************************************************************
 // CON Descriptor structure and content
@@ -625,7 +637,7 @@ extern uint8_t udi_hid_con_report[UDI_HID_CON_REPORT_SIZE];
 
 COMPILER_PACK_RESET()
 
-#endif // CONSOLE_ENABLE
+#endif  // CONSOLE_ENABLE
 
 // **********************************************************************
 // CDC Descriptor structure and content
@@ -768,7 +780,7 @@ typedef struct {
 
 COMPILER_PACK_RESET()
 
-#endif // VIRTSER_ENABLE
+#endif  // VIRTSER_ENABLE
 
 // **********************************************************************
 // CONFIGURATION Descriptor structure and content
@@ -803,4 +815,4 @@ typedef struct {
 
 COMPILER_PACK_RESET()
 
-#endif //_UDI_DEVICE_CONF_H_
+#endif  //_UDI_DEVICE_CONF_H_

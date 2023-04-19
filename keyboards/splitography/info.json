@@ -3,6 +3,7 @@
     "keyboard_name": "Splitography",
     "url": "https://softhruf.love/collections/writers",
     "maintainer": "qmk",
+    "processor": "atmega32u4",
     "diode_direction": "COL2ROW",
     "features": {
         "steno": true,
@@ -22,10 +23,8 @@
     "usb": {
         "vid": "0xFEED",
         "pid": "0x6060",
-        "device_version": "0.0.1"
+        "device_ver": "0x0001"
     },
-    "processor": "atmega32u4",
-    "bootloader": "atmel-dfu",
     "layouts": {
         "LAYOUT": {
             "layout": [

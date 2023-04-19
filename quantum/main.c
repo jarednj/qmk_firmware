@@ -43,6 +43,10 @@ void protocol_task(void) {
     protocol_post_task();
 }
 
+#ifdef DEFERRED_EXEC_ENABLE
+void deferred_exec_task(void);
+#endif  // DEFERRED_EXEC_ENABLE
+
 /** \brief Main
  *
  * FIXME: Needs doc
@@ -59,17 +63,10 @@ int main(void) {
     while (true) {
         protocol_task();
 
-#ifdef QUANTUM_PAINTER_ENABLE
-        // Run Quantum Painter task
-        void qp_internal_task(void);
-        qp_internal_task();
-#endif
-
 #ifdef DEFERRED_EXEC_ENABLE
         // Run deferred executions
-        void deferred_exec_task(void);
         deferred_exec_task();
-#endif // DEFERRED_EXEC_ENABLE
+#endif  // DEFERRED_EXEC_ENABLE
 
         housekeeping_task();
     }

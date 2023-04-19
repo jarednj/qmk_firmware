@@ -59,7 +59,7 @@ $ qmk compile -km 66_iso
 ```
 $ cd ~/qmk_firmware/keyboards/gh60/satan/keymaps/colemak
 $ qmk compile
-Ψ Compiling keymap with make gh60/satan:colemak
+Ψ Compiling keymap with make make gh60/satan:colemak
 ...
 ```
 
@@ -275,14 +275,14 @@ $ qmk kle2json -f kle.txt -f
 Ψ Wrote out to info.json
 ```
 
-## `qmk format-python`
+## `qmk format-py`
 
 このコマンドは `qmk_firmware` 内の python コードを整形します。
 
 **使用法**:
 
 ```
-qmk format-python
+qmk format-py
 ```
 
 ## `qmk pytest`

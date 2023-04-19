@@ -2,7 +2,7 @@
 MCU = attiny85
 
 # Bootloader selection
-BOOTLOADER = custom
+BOOTLOADER = micronucleus
 OPT_DEFS += -DBOOTLOADER_SIZE=1862
 PROGRAM_CMD = micronucleus --run $(BUILD_DIR)/$(TARGET).hex
 

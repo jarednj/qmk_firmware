@@ -3,6 +3,8 @@
     "keyboard_name": "DirectPins ProMicro",
     "maintainer": "skullydazed",
     "bootloader": "atmel-dfu",
+    "debounce": 5,
+    "diode_direction": "COL2ROW",
     "features": {
         "bootmagic": true,
         "extrakey": true,
@@ -24,7 +26,7 @@
     },
     "processor": "atmega32u4",
     "usb": {
-        "device_version": "0.0.1",
+        "device_ver": "0x0001",
         "pid": "0x2320",
         "vid": "0xFEED"
     },
